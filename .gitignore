@@ -1,0 +1,10 @@
+# Ignore Obsidian settings
+.obsidian/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
