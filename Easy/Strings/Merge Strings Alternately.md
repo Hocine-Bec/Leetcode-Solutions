@@ -1,9 +1,14 @@
+---
+Link: https://leetcode.com/problems/merge-strings-alternately/
+tags:
+  - "#TwoPointers"
+  - "#Strings"
+---
 #### **Problem Statement**
 
-- **Title**: Merge Strings Alternately
-    
-- **Link**: [LeetCode Problem 1768](https://leetcode.com/problems/merge-strings-alternately/)
-    
+- **Title**: 
+	Merge Strings Alternately
+
 - **Description**:  
     You are given two strings, `word1` and `word2`. Merge the strings by adding letters in alternating order, starting with `word1`. If one string is longer than the other, append the additional letters to the end of the merged string.
     
@@ -115,13 +120,6 @@ public static string MergeAlternately(string word1, string word2)
 
 #### **Related Problems**
 
-- [[MergeTwoSortedLists]]
-- [[AddStrings]]
-- [[LongestCommonPrefix]]
-
----
-
-#### **Tags**
-
-- #TwoPointers
-- #Strings
+- [Merge Two Sorted Lists]([Merge Two Sorted Lists - LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/description/))
+- [Add Strings]([Add Strings - LeetCode](https://leetcode.com/problems/add-strings/description/))
+- [Longest Common Prefix]([Longest Common Prefix - LeetCode](https://leetcode.com/problems/longest-common-prefix/description/))
