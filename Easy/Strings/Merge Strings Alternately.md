@@ -3,6 +3,7 @@ Link: https://leetcode.com/problems/merge-strings-alternately/
 tags:
   - "#TwoPointers"
   - "#Strings"
+  - Easy
 ---
 #### **Problem Statement**
 

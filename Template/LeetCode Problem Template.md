@@ -39,3 +39,7 @@ tags:
 
 ---
 ### **9. Progress Tracker**
+
+- **Status**: 
+- **Confidence Level**: 
+- **Revisit**: 

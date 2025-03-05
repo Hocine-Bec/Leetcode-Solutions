@@ -3,6 +3,7 @@ Link: https://leetcode.com/problems/valid-parentheses/description/
 tags:
   - Stack
   - Strings
+  - Easy
 ---
 ### **1. Problem Statement**
 
