@@ -148,4 +148,9 @@ public IList<IList<int>> Generate(int numRows)
 - **Confidence**: High
 - **Revisit**: Yes (to solidify dynamic row generation and indexing)
 
+---
 
+>[!Related Concepts]
+>- [[001_Arrays]]
+>- [[018_Lists]]
+>- [[014_IList]]

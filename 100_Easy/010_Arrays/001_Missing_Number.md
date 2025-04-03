@@ -175,3 +175,9 @@ public class Solution {
 - **Status**: Solved
 - **Confidence**: High
 - **Revisit**: Yes (to solidify the one loop and arithematic approach)
+
+---
+
+>[!Related Concepts]
+>- [[01_Arrays]]
+>- [[001_Sum]]

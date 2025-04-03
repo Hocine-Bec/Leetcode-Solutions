@@ -152,3 +152,8 @@ public bool IsValid(string s)
 - **Status**: I didn't solve it
 - **Confidence Level**: Medium
 - **Revisit**: Yes
+
+---
+
+>[!Related Concepts]
+>- [[026_Stacks]]

@@ -185,3 +185,8 @@ public bool IsSubsequence(string s, string t) {
 - **Status**: Solved
 - **Confidence**: High (after corrections and understanding the two-pointer approach)
 - **Revisit**: No (core concept is clear, implementation is straightforward)
+
+---
+
+>[!Related Concepts]
+>- [[026_Stacks]]
