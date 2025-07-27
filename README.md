@@ -1,59 +1,90 @@
-# LeetCode Solutions
+# 🧠 LeetCode Learning Journey
 
-This personal repository documents my journey of solving problems on LeetCode. Each problem includes my solution, explanations of what I did, why I chose a particular approach, alternative solutions, and additional notes. I'm using these notes to improve my problem-solving skills, thought process, and understanding of algorithms and data structures.
+Welcome to my `LeetCode` problem-solving journal! This repository documents my progress, mistakes, and solutions as I learn and practice algorithms and data structures.
 
-## Structure
-The repository is organized as follows:
-- **3 Main Folders**: `Easy`, `Medium`, and `Hard`.
-  - Each folder contains subfolders for **Data Structures** (e.g., `Arrays`, `Linked Lists`, `Trees`, etc.).
-    - Each data structure folder contains problems related to it.
-- **Solutions**:
-  - Initially solved in **C#**.
-  - Later solutions include **Python** and **C++**.
-- **Notes**:
-  - Problem statement.
-  - Approaches.
-  - Explanation.
-  - Time/Space complexity analysis.
-  - Edge cases.
-  - Mistakes and debugging.
-  - Optimizations.
-  - Alternative solutions.
-  - Related problems.
+I use **Obsidian** for note-taking and maintain detailed logs of every problem I solve, including:
 
-## Languages Used
-- **C#**: Primary language for initial solutions.
-- **Python**: Used for concise and readable implementations.
-- **C++**: Used for performance-critical solutions.
+- ❌ First incorrect attempts
+- ✅ Correct brute-force solutions
+- 🚀 Optimized approaches (with time/space complexity)
+- 💬 Notes on learning and strategy
 
-## Notes Format
-Each problem's notes follow this structure:
-1. **Problem Statement**: Brief description of the problem.
-2. **Approach**: Explanation of the chosen approach.
-3. **Explanation**: Detailed reasoning behind the solution.
-4. **Time/Space Complexity**: Analysis of the solution's efficiency.
-5. **Edge Cases**: Handling of edge cases.
-6. **Mistakes and Debugging**: Common mistakes and how they were resolved.
-7. **Optimizations**: Improvements made to the solution.
-8. **Alternative Solutions**: Other possible approaches.
-9. **Related Problems**: Links to similar problems for further practice.
+## 📚 What You'll Find Here
 
-## How to Use This Repository
-- **For Learning**: Browse through the solutions and notes to understand my approach to solving LeetCode problems and get inspired by it.
-- **For Practice**: Use the related problems section to find similar problems to practice.
-- **For Contribution**: If you have alternative solutions or improvements, feel free to open a pull request.
+Each note follows this format:
 
-## Contributing
-Contributions are welcome! If you have:
-- Alternative solutions.
-- Optimizations.
-- Additional notes or explanations.
-- Suggestions for improving the repository.
+- **Title**: `### - Problem Title`
+  - e.g., `004 - Search Insert Position`
+- **Link to the problem**
+- **Tags**:
+  - `Difficulty`: Easy / Medium / Hard
+  - `Topic`: Array, String, Tree, etc.
+  - `Techniques`: Binary Search, Two Pointers, etc.
+- **Code attempts** (in C#, Python3, and sometimes C++)
+  - Includes wrong submissions and step-by-step improvements
+  - Final accepted solution with optimal complexity
+- **Language Focus**:
+  - 💻 C# (primary)
+  - 🐍 Python3 (secondary)
+  - 💠 Occasional C++
 
-Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Submit a pull request with a detailed description of your changes.
+## 🛠 Sample Entry Structure
 
-## License
-This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as needed.
+```
+### 004 - Search Insert Position
+
+[Link](https://leetcode.com/problems/search-insert-position/)  
+**Tags**: Easy | Array | Binary Search
+
+## First Attempt:
+_Wrong answer_
+
+// C# naive implementation
+public class Solution {
+    public int SearchInsert(int[] nums, int target)
+    {
+        ...
+    }
+}
+
+## Second Attempt:
+_Correct answer, O(n)_
+
+// C# linear search
+public class Solution {
+    public int SearchInsert(int[] nums, int target)
+    {
+        ...
+    }
+}
+
+## Third Attempt:
+_Correct and optimized, O(log n)_
+
+# Python binary search
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        ...
+```
+
+## ✍️ Why This Format?
+
+- Makes it easy to **track progress** and **reflect** on learning.
+- Highlights how **solutions evolve** through iterations.
+- Reinforces concepts through **multi-language practice**.
+- Helps me **build a consistent problem-solving habit**.
+
+## 🚧 Note
+
+This is a continuous learning project. I add new problems regularly. Stay tuned!
+
+## 🤝 Contributions
+
+This repo is personal, but I'm happy to connect with fellow learners. Feel free to:
+
+- Suggest better approaches
+- Share resources
+- Discuss problems
+
+## 📌 License
+This repository is for personal learning and educational purposes.
