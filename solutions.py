@@ -1,25 +1,22 @@
-from typing import List
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
 
+def isBadVersion(version: int) -> bool:
+        return version >= 7
 
-class Solution:
-    def mySqrt(self, x: int) -> int:
-        l, h = 0, x
-        res = 0
-
-        while l <= h:
-            m = l + ((h - l) // 2)
-            if (m * m) > x:
-                h = m - 1
-            elif (m * m) < x:
-                l = m + 1
-                res = m
+class Solution:    
+    def firstBadVersion(self, n: int) -> int:
+        l, r = 1, n
+        while l < r:
+            m = l + ((r - l)//2)
+            if isBadVersion(m):
+                r = m
             else:
-                return m
-        
-        return res
-            
+                l = m + 1
+        return l
+    
     
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.mySqrt(816))
+    print(sol.firstBadVersion(51))
             
