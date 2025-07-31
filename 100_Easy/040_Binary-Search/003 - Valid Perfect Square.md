@@ -1,8 +1,15 @@
-# The isBadVersion API is already defined for you.
-# def isBadVersion(version: int) -> bool:
+---
+Link: https://leetcode.com/problems/valid-perfect-square/description/?envType=problem-list-v2&envId=binary-search
+tags:
+  - Easy
+  - Math
+  - BinarySearch
+---
+## First Attempt:
+*Correct Answer:*
+This is the first problem I solved without AI hints or heading over to `NeetCode` to explain it:
 
-from typing import List
-
+```python
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         l, r = 0, num
@@ -15,10 +22,5 @@ class Solution:
                 r = m - 1
             else:
                 l = m + 1
-
         return False
-
-if __name__ == "__main__":
-    sol = Solution()
-    print(sol.isPerfectSquare(100))
-            
+```
