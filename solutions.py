@@ -5,16 +5,22 @@ import math
 from typing import List
 
 class Solution:
-    def arrangeCoins(self, n: int) -> int:
-        i, res = 1, 0
-        while i <= n:
-            n = n - i
-            res = i
-            i += 1
-        return res
+    def search(self, nums: List[int], target: int) -> int:       
+        l, r = 0, len(nums)
+        while l < r:
+            m = l + ((r - l) // 2)
+            if nums[m] == target:
+                return m
+            elif nums[m] > target:
+                r = m
+            else:
+                l = m + 1
 
+        return -1
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.arrangeCoins(15))
+    nums = [-1,0,3,5,9,12]
+    target = 13
+    print(sol.search(nums, target))
             
