@@ -1,55 +1,51 @@
 import math
 from typing import List
 
+
 # class Solution:
-#     def strStr(self, haystack: str, needle: str) -> int:
-#         if len(needle) > len(haystack):
-#             return -1
-        
-#         l, firstIndex = 0, 0
-#         while l < len(haystack):
-#             r = 0
-#             if haystack[l] != needle[r]:
-#                 l += 1  
-#             else:
-#                 firstIndex = l
-#                 while l < len(haystack) and r < len(needle):
-#                     if haystack[l] != needle[r]:
-#                         break
-#                     l += 1
-#                     r += 1
+#     def isHappy(self, n: int) -> bool:
+#         freq = { n: 0 }
+#         index = 0
+#         while True:
+#             sum, sqrt, mod = 0, 0, 0
+#             while n != 0: 
+#                 mod = n % 10
+#                 sqrt = mod**2
+#                 sum += sqrt
+#                 n = n // 10
 
-#                 if r == (len(needle)):
-#                     return firstIndex
-  
-#                 l = firstIndex + 1
-        
-#         return -1
+#             if sum == 1:
+#                 return True
+#             if sum in freq:
+#                 return False
+            
+#             n = sum
+#             index += 1
+#             freq[n] = index
 
+#         return False
 
 class Solution:
-    def strStr(self, haystack: str, needle: str) -> int:
-        if len(needle) > len(haystack):
-            return -1
+    def isHappy(self, n: int) -> bool:
+        seen = set()
+        while n != 1:
+            current, sum = n, 0
         
-        l = 0
-        while l <= len(haystack) - len(needle):
-            if haystack[l] == needle[0]:
-                i = l
-                r = 0
-                while r < len(needle) and haystack[i] == needle[r]:
-                    i += 1
-                    r += 1
-                if r == len(needle):
-                    return l
-            l += 1
-        
-        return -1
+            while current > 0:
+                digit = current % 10
+                sum += digit ** 2
+                current //= 10
+
+            if sum in seen:
+                return False
+            
+            seen.add(sum)
+            n = sum
+
+        return True
 
 
 if __name__ == "__main__":
     sol = Solution()
-    haystack = "mississippi"
-    needle = "issippi"
-    print(sol.strStr(haystack, needle))
+    print(sol.isHappy(20))
             
