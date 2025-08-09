@@ -26,21 +26,25 @@ from typing import List
 #         return False
 
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        left = 0
-        for right in range(len(nums)):
-            if nums[right] != 0:
-                if nums[left] != nums[right]:
-                    nums[left] = nums[right]
-                    nums[right] = 0
-                left += 1
+    def reverseStr(self, s: str, k: int) -> str:
+        arr = list(s)
+        for i in range(0, len(arr), 2 * k):
+            l = i
+            m = i+k-1
+            if m >= len(arr):
+                m = len(arr) - 1
+            while l < m:
+                arr[l], arr[m] = arr[m], arr[l]
+                l += 1
+                m -= 1
+        return ''.join(arr)
+
+
 
 if __name__ == "__main__":
     sol = Solution()
-    nums = [0, 1, 0, 3, 12]
-    sol.moveZeroes(nums)
+    s = "abcdefg"
+    k = 2
+    print(sol.reverseStr(s, k))
     
             
