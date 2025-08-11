@@ -1,26 +1,30 @@
-import math
-from typing import List
 
 
 class Solution:
-    def reverseWords(self, s: str) -> str:
-      words = s.split(" ")  
-      for i in range(len(words)):
-        chars = list(words[i])
-        left, right = 0, len(chars) - 1
+    def countBinarySubstrings(self, s: str) -> int:
+        groups = []
+        l, r = 0, 0  
+        curr_count, prev_count = 1, 0 
+        res = 0
+        while l < len(s) and r < len(s):
+            if s[l] == s[r]:
+                curr_count += 1
+                r += 1
+            else:
+                res += min(groups[l], groups[r])
+                count = 1 
+                l = r
+                r += 1  
+        groups.append(count)
+        l, r, res = 0, 1, 0
+        while r < len(groups):
+            
+            l += 1
+            r += 1
 
-        while left < right:
-          chars[left], chars[right] = chars[right], chars[left]
-          left += 1
-          right -= 1
+        return res
 
-        words[i] = "".join(chars)
-
-      return " ".join(words)
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    s = "Mr Ding"
-    print(sol.reverseWords(s))
-    
+# Test with your example
+solution = Solution()
+result = solution.countBinarySubstrings("10101")
+print(f"Final result: {result}")  # Should be 6
