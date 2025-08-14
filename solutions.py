@@ -1,26 +1,45 @@
 from typing import List
 
+# class Solution:
+#     def sortArrayByParity(self, nums: List[int]) -> List[int]:
+#         l, r = 0, len(nums) - 1     
+#         while l < r:
+#             if nums[l] % 2 == 0:
+#                 l += 1
+#                 continue
+#             elif nums[r] % 2 != 0:
+#                 r -= 1
+#                 continue
+            
+#             temp = nums[l]
+#             nums[l] = nums[r]
+#             nums[r] = temp  
+            
+#             l += 1
+#             r -= 1
+
+#         return nums
+    
+
+# Alternative solution using list Bitwise AND operation
 class Solution:
-    def reverseOnlyLetters(self, s: str) -> str:
-        l, r = 0, len(s) - 1 
-        letters = list(s)    
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        l, r = 0, len(nums) - 1     
         while l < r:
-            if not s[l].isalpha():
+            if (nums[l] & 0x1) == 0:
                 l += 1
                 continue
-            elif not s[r].isalpha():
+            elif (nums[r] & 0x1) != 0:
                 r -= 1
                 continue
             
-            temp = letters[l]
-            letters[l] = letters[r]
-            letters[r] = temp  
-            
+            nums[l], nums[r] = nums[r], nums[l]
             l += 1
             r -= 1
 
-        return "".join(letters)
-
+        return nums
+    
 # Test both solutions
 sol = Solution()
-print(f"Output: {sol.reverseOnlyLetters("Test1ng-Leet=code-Q!")}")
+nums = [2, 4, 6, 3, 5, 8]
+print(f"Output: {sol.sortArrayByParity(nums)}")
